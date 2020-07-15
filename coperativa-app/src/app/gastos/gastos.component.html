@@ -1,0 +1,39 @@
+
+
+<div class="card">
+    <div class="card-header">
+      LISTA DE GASTOS
+    </div>
+    <div class="card-body">
+     
+       <div class="my-2 text-left">
+        <button class="btn btn-rounded btn-primary" type="button" [routerLink] = "['/gasto/form']">Ingresar Gasto</button>
+       </div>
+
+
+        <table class="table table-bordered table-stripped">
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>motivo</th>
+                    <th>valor</th>
+                    <th>fecha</th>
+                    <th>numero de factura</th>
+                    <th>tipo</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr *ngFor = "let item of gasto">
+                    <td>{{item.id}}</td>
+                    <td>{{item.motivo}}</td>
+                    <td>{{item.valor}}</td>
+                    <td>{{item.fecha}}</td>
+                    <td>{{item.numFactura}}</td>
+                    <td>{{item.tipoGasto.descripcion}}</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+  </div>
